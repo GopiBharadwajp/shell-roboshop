@@ -1,5 +1,5 @@
 #!/bin/bash
-
+i-0abcdef123456789
 AMI_ID="ami-09c813fb71547fc4f"
 SG_ID="sg-03a031274602046a1"
 INSTANCES=("mongobd" "redis" "mysql" "rabbitmq" "catalogue" "user" "cart" "shipping" "payment" "dispatch" "frontend")
@@ -13,10 +13,10 @@ do
     --tag-specifications "ResourceType=instance,Tags=[{Key=Name, Value=$instance}]" --query "Instances[0].InstanceId" --output text)
     if [ $instance != "frontend" ]
     then
-        IP=$(aws ec2 describe-instances --instance-ids i-0abcdef123456789 
+        IP=$(aws ec2 describe-instances --instance-ids $INSTANCE_ID 
         --query "Reservations[0].Instances[0].PrivateIpAddress" --output tex)
     else
-       IP=$(aws ec2 describe-instances --instance-ids i-0abcdef123456789 
+       IP=$(aws ec2 describe-instances --instance-ids $INSTANCE_ID 
         --query "Reservations[0].Instances[0].PublicIpAddress" --output tex)
     fi
    echo "$INstance IP adress: $IP"
