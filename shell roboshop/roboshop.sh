@@ -1,7 +1,7 @@
 #!/bin/bash
 AMI_ID="ami-09c813fb71547fc4f"
 SG_ID="sg-03a031274602046a1"
-INSTANCES=("mongobd" "redis" "mysql" "rabbitmq" "catalogue" "user" "cart" "shipping" "payment" "dispatch" "frontend")
+INSTANCES=("mongodb" "redis" "mysql" "rabbitmq" "catalogue" "user" "cart" "shipping" "payment" "dispatch" "frontend")
 ZONE_ID="Z0095891220EQ8FJXWFW1"
 DOMAINNAME="gorobo.site"
 
