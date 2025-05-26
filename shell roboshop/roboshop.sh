@@ -13,11 +13,9 @@ do
     --tag-specifications "ResourceType=instance,Tags=[{Key=Name, Value=$instance}]" --query "Instances[0].InstanceId" --output text)
     if [ $instance != "frontend" ]
     then
-        IP=$(aws ec2 describe-instances --instance-ids $INSTANCE_ID 
-        --query "Reservations[0].Instances[0].PrivateIpAddress" --output tex)
+        IP=$(aws ec2 describe-instances --instance-ids $INSTANCE_ID --query "Reservations[0].Instances[0].PrivateIpAddress" --output tex)
     else
-       IP=$(aws ec2 describe-instances --instance-ids $INSTANCE_ID 
-        --query "Reservations[0].Instances[0].PublicIpAddress" --output tex)
+       IP=$(aws ec2 describe-instances --instance-ids $INSTANCE_ID --query "Reservations[0].Instances[0].PublicIpAddress" --output tex)
     fi
    echo "$INstance IP adress: $IP"
     done
