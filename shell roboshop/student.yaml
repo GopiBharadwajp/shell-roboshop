@@ -1,0 +1,23 @@
+- name: gopi
+  lastname: bharadwaj
+  email: gopi@gmail.com
+  addresses:
+  -type: perm
+  doorNo: 12
+  street: asian colony
+  -type: current
+  doorno: 13
+  street: asian colony
+
+
+
+- name: gopi
+  lastname: bharadwaj
+  email: gopi@gmail.com
+  addresses:
+  -type: perm
+  doorNo: 12
+  street: asian colony
+  -type: current
+  doorno: 13
+  street: asian colony
